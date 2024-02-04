@@ -1,0 +1,23 @@
+.header{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.navigation{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20%;
+}
+
+.nav_link{
+    font-size:23px;
+    text-decoration: none;
+    color: rgb(31, 31, 179);
+    font-weight: 800;
+    padding-bottom: 8px;
+}
+

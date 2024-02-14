@@ -1,7 +1,15 @@
-import React from 'react'
+import React from "react";
+import { useAPP } from "../utils/context";
 
-const Blog= () => {
-  return <div>Blog</div>
-}
+const Blog = () => {
+  const { message } = useAPP();
 
-export default Blog
+  return (
+    <div>
+      Blog
+      <h1>{message}</h1>
+    </div>
+  );
+};
+
+export default Blog;

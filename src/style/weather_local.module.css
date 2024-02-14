@@ -1,0 +1,145 @@
+body{
+  background: rgb(255,255,255);
+  background: -moz-linear-gradient(90deg, rgba(255,255,255,1) 2%, rgba(232,229,229,1) 38%, rgba(120,117,117,1) 73%, rgba(80,80,80,1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(255,255,255,1) 2%, rgba(232,229,229,1) 38%, rgba(120,117,117,1) 73%, rgba(80,80,80,1) 100%);
+  background: linear-gradient(90deg, rgba(255,255,255,1) 2%, rgba(232,229,229,1) 38%, rgba(120,117,117,1) 73%, rgba(80,80,80,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#505050",GradientType=1);
+}
+.container {
+  background-color: rgba(186, 183, 183, 0.356);
+  border-radius: 30px;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.344);
+}
+.local_container {
+  width: 30%;
+  height: 29vh;
+}
+.current_container {
+  width: 62%;
+  height: 26vh;
+  padding: 15px 24px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+.date_box {
+  padding-top: 53px;
+}
+.cityName {
+  font-size: calc(30% / 20 * 100);
+  font-weight: 900;
+  margin-bottom: calc(100vh / 50);
+}
+.time {
+  font-size: calc(30% / 8 * 100);
+  font-weight: 900;
+}
+.current_box {
+  display: flex;
+}
+.condition {
+  width: 40%;
+}
+.temp_box,
+.metrix {
+  width: 30%;
+}
+.temp {
+  font-size: 60px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+.temp_feel {
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 5vh;
+  color: tomato;
+}
+.metrix {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.metrix_card {
+  width: 70px;
+  margin-bottom: 2vh;
+}
+.metrix img {
+  width: 6vh;
+}
+.metrix_text {
+  font-weight: 900;
+  font-size: 15px;
+}
+.secondary_text {
+  font-size: 12px;
+}
+.condition img {
+  width: 20vh;
+  height: 20vh;
+}
+
+
+.inputing {
+  width: 30vw;
+  margin-right: 50px;
+  height: 15px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1.5px solid rgb(0, 0, 0);
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  box-shadow: 0px 0px 20px -18px;
+}
+
+
+
+.inputing:active {
+  transform: scale(0.98);
+}
+
+.inputing:focus {
+  border: 1px solid grey;
+}
+
+.main_container,form{
+  margin-left: -700px;
+}
+
+button {
+  border: none;
+  color: #fff;
+  background-color: rgb(10, 184, 10);
+  border-radius: 20px;
+  background-size: 100% auto;
+  font-family: inherit;
+  font-size: 17px;
+  padding: 0.6em 1.5em;
+ }
+ 
+ button:hover {
+  background-position: right center;
+  background-size: 200% auto;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse512 1.5s linear;
+ }
+ 
+button:active{
+ 
+  -webkit-animation: pulse 2s infinite;
+}
+
+ @keyframes pulse512 {
+  0% {
+   box-shadow: 0 0 0 0 #05bada66;
+  }
+ 
+  70% {
+   box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+  }
+ 
+  100% {
+   box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+  }
+ }

@@ -1,17 +1,33 @@
-import React from 'react'
-import { NavLink } from "react-router-dom";
-import s from "../style/header.module.css"
+import React, { createRef, useState } from "react";
+import s from "../style/header.module.css";
+import Navigation from "./navigation";
 const Header = () => {
-  return (
-   <div>
-    <h1>Maxvel</h1>
-        <nav className={s.navigation}>
-            <NavLink className={s.nav_link} to="news">News</NavLink>
-            <NavLink className={s.nav_link} to="weather">Weather</NavLink>
-            <NavLink className={s.nav_link} to="blog">Blog</NavLink>
-        </nav>
-    </div>
-    )
-}
+  const [inputValue, setInputValue] = useState("");
 
-export default Header
+  const searchInput = createRef();
+  function onFormBtnClick(e) {
+    e.preventDefault();
+    console.log(searchInput.current.value);
+    localStorage.setItem("inputValue", JSON.stringify(inputValue));
+  }
+  function searchInputChange(e) {
+    setInputValue(searchInput.current.value);
+  }
+  return (
+    <header className={s.header}>
+      <div className={s.logo}>Maxvel</div>
+      <Navigation />
+    </header>
+  );
+};
+
+export default Header;
+
+// const input = document.querySelector(input)
+
+// input.addListener("input", onInputChange)
+
+// function onInputChange(e){
+//     e.preventDefault()
+//     const inputValue = e.currentTarget.value
+// }

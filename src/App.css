@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.App {
+  text-align: center;
+}
+.dark-theme {
+  background-color: black;
+  color: aliceblue;
+}
+
+.main_container {
+  width: 92%;
+  margin: 0 auto;
+}
+.forecast_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

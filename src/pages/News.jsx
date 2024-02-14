@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "../style/news.css";
+import n from "../style/news.css";
+import s from "../style/weather_local.module.css";
 import { useAPP } from "../utils/context";
 import { Link } from "react-router-dom";
 
@@ -34,7 +35,8 @@ const News = () => {
       <form onSubmit={onFormSubmit}>
         <input
           type="text"
-          className="searchInput"
+          name="text"
+          className={s.inputing}
           placeholder="What you want?"
           value={inputValue}
           onChange={handleInputchange}

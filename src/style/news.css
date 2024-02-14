@@ -42,13 +42,13 @@
   
   .news-title {
     font-size: 18px;
-    color:black;
+    color:rgb(88, 85, 85);
     margin-top: 10px;
     
   }
   
   .news-description {
-    color: #666;
+    color: #000000;
     margin: 0px;
     text-decoration: none;
   }
@@ -71,9 +71,9 @@
   
   
 
-  form {
-  
-    margin-left: -259px;
-    margin-top: 40px;
+  .container form {
+  margin-left: -500px;
+    text-align: left;
+    margin-top: 60px;
   }
   

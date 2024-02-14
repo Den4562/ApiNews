@@ -2,6 +2,7 @@ import React from "react";
 import { useAPP } from "../../utils/context";
 import { formatedTime } from "../../utils/formatDate";
 import windIcon from "../../assets/weather/wind_dir.png";
+import s from "../../style/weather_local.module.css";
 export default function Hourly_forecast() {
   const { weatherState, weatherIndex } = useAPP();
   if (!weatherState) {
@@ -11,9 +12,9 @@ export default function Hourly_forecast() {
   console.log(forecast_data);
 
   return (
-    <div>
-      <h1>Погодинний прогноз</h1>
-      <ul style={{ display: "flex", width: "60vw", overflow: "auto" }}>
+    <div className={s.containerHourtly}>
+      <h1>Hourly forecast</h1>
+      <ul className={s.elementsHourtly} style={{ display: "flex" }}>
         {forecast_data?.map((item) => {
           const localDateTime = new Date(item.time);
           return (

@@ -3,6 +3,7 @@ import { useAPP } from "../../utils/context";
 import { formatedTime } from "../../utils/formatDate";
 import windIcon from "../../assets/weather/wind_dir.png";
 import s from "../../style/weather_local.module.css";
+
 export default function Hourly_forecast() {
   const { weatherState, weatherIndex } = useAPP();
   if (!weatherState) {
@@ -15,8 +16,25 @@ export default function Hourly_forecast() {
     <div className={s.containerHourtly}>
       <h1>Hourly forecast</h1>
       <ul className={s.elementsHourtly} style={{ display: "flex" }}>
-        {forecast_data?.map((item) => {
+        {forecast_data?.map((item, index) => {
           const localDateTime = new Date(item.time);
+          // Вычисляем индекс для цвета фона
+          const colorIndex = Math.floor(index / 3) % 3;
+          let backgroundGradient; // Определение переменной перед использованием
+          // Создаем градиент в зависимости от индекса
+          switch (colorIndex) {
+            case 0:
+              backgroundGradient = "linear-gradient(to top, #f0c85e, #f0a41c)";
+              break;
+            case 1:
+              backgroundGradient = "linear-gradient(to top, #817799,#6556a7)";
+              break;
+            case 2:
+              backgroundGradient = "linear-gradient(to top, #f08080, #cd5c5c)";
+              break;
+            default:
+              backgroundGradient = "none";
+          }
           return (
             <li
               key={item.date}
@@ -25,7 +43,7 @@ export default function Hourly_forecast() {
                 marginRight: "1vw",
                 borderRadius: "10px",
                 padding: "10px 15px",
-                backgroundColor: "grey",
+                backgroundImage: backgroundGradient,
               }}
             >
               <p>{formatedTime(localDateTime)}</p>
